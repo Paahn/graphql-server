@@ -1,0 +1,24 @@
+{
+  "name": "my-graphql-server",
+  "version": "1.0.0",
+  "description": "> Simple graphql server",
+  "main": "myServer.js",
+  "dependencies": {
+    "apollo-server": "^2.19.0",
+    "graphql": "^15.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paahn/graphql-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paahn/graphql-server/issues"
+  },
+  "homepage": "https://github.com/Paahn/graphql-server#readme"
+}
