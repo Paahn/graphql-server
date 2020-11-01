@@ -5,13 +5,16 @@ const typeDefs = gql`
         name: String!
         affiliation: String!
         padawan: Jedi
-        lightsaber: String!
+        lightsabers: [String]!
         forms: [String]
         master: Jedi
+        nickname: String
     }
 
     type Query {
         obiWan: Jedi!
+        ani: Jedi!
+        ahsoka: Jedi!
     }
 `
 
@@ -24,10 +27,49 @@ const resolvers = {
                 padawan: {
                     name: 'Anakin  Skywalker',
                     affiliation: 'Knight',
-                    lightsaber: 'blue'
+                    lightsabers: ['blue']
                 },
-                lightsaber: 'blue',
-                forms: ['Form IV', 'Soresu']
+                lightsabers: ['blue'],
+                forms: ['Form IV', 'Soresu'],
+                master: {
+                    name: 'Qui-Gon Jinn'
+                },
+                nickname: 'Ben'
+            }
+        },
+        ani() {
+            return {
+                name: 'Anakin Skywalker',
+                affiliation: 'Not granted the rank of Master',
+                padawan: {
+                    name: 'Ahsoka Tano',
+                    affiliation: 'Padawan',
+                    lightsabers: ['Yellow', 'Green'],
+                    forms: ['Form V - Shien'],
+                    master: {
+                        name: 'Anakin Skywalker'
+                    }
+                },
+                lightsabers: ['blue'],
+                form: ['Form V - Djem So'],
+                master: {
+                    name: 'Obi-Wan Kenobi',
+                    nickname: 'Ben'
+                },
+                nickname: 'Ani'
+            }
+        },
+        ahsoka() {
+            return {
+                name: 'Ahsoka Tano',
+                affiliation: 'Padawan',
+                lightsabers: ['Yellow', 'Green'],
+                forms: ['Form V - Shien'],
+                master: {
+                    name: 'Anakin Skywalker',
+                    nickname: 'Skyguy'
+                },
+                nickname: 'Snips'
             }
         }
     }
