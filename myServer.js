@@ -11,10 +11,20 @@ const typeDefs = gql`
         nickname: String
     }
 
+    type Sith {
+        name: String!
+        title: String!
+        affiliation: String!
+        abilities: [String]!
+        master: Sith
+        origin: String!
+    }
+
     type Query {
         obiWan: Jedi!
         ani: Jedi!
         ahsoka: Jedi!
+        sidious: Sith!
     }
 `
 
@@ -70,6 +80,22 @@ const resolvers = {
                     nickname: 'Skyguy'
                 },
                 nickname: 'Snips'
+            }
+        },
+        sidious() {
+            return {
+                name: 'Sheev Palpatine',
+                title: 'Darth Sidious',
+                affiliation: 'Master',
+                abilities: [
+                    'Force Lightning', 'Force Spin', 'Telekinesis', 'Force Choke',
+                    'Dark Aura', 'Foresight', 'Sith Magic', 'Force Persuasion',
+                    'Concealing himself in the Force', 'Force Dash'
+                ],
+                master: {
+                    name: 'Darth Plagueis'
+                },
+                origin: 'Naboo'
             }
         }
     }
