@@ -20,11 +20,21 @@ const typeDefs = gql`
         origin: String!
     }
 
+    input NewJediInput {
+        name: String!
+        affiliation: String!
+        lightsabers: [String]!
+    }
+
     type Query {
         obiWan: Jedi!
         ani: Jedi!
         ahsoka: Jedi!
         sidious: Sith!
+    }
+    
+    type Mutation {
+        newJedi(input: NewJediInput!): Jedi!
     }
 `
 
@@ -97,6 +107,11 @@ const resolvers = {
                 },
                 origin: 'Naboo'
             }
+        }
+    },
+    Mutation: {
+        newJedi(_, {input}) {
+            return input
         }
     }
 }
