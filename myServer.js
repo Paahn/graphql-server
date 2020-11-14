@@ -26,6 +26,12 @@ const typeDefs = gql`
         lightsabers: [String]!
     }
 
+    input NewSithInput {
+        name: String!
+        affiliation: String!
+        origin: String!
+    }
+
     type Query {
         obiWan: Jedi!
         ani: Jedi!
@@ -35,6 +41,10 @@ const typeDefs = gql`
     
     type Mutation {
         newJedi(input: NewJediInput!): Jedi!
+    }
+
+    type Mutation {
+        newSith(input: NewSithInput!): Sith!
     }
 `
 
