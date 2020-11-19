@@ -26,7 +26,7 @@ const typeDefs = gql`
         affiliation: String!
         abilities: [String]!
         master: Sith
-        origin: String!
+        origin: Planet!
     }
 
     input NewJediInput {
@@ -38,7 +38,7 @@ const typeDefs = gql`
     input NewSithInput {
         name: String!
         affiliation: String!
-        origin: String!
+        origin: Planet!
     }
 
     type Query {
