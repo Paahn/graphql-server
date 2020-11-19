@@ -1,6 +1,15 @@
 const { ApolloServer, gql } = require('apollo-server')
 
 const typeDefs = gql`
+    enum Planet {
+        KORRIBAN
+        CORUSCANT
+        NABOO
+        ILUM
+        TATOOINE
+        HOTH
+    }
+
     type Jedi {
         name: String!
         affiliation: String!
