@@ -157,6 +157,7 @@ const resolvers = {
     Being: {
         __resolveType(being) {
             if (being.outerRim) return 'Alien'
+            return 'Human'
         }
     }
 }
