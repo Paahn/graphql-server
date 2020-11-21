@@ -1,6 +1,9 @@
 const { ApolloServer, gql } = require('apollo-server')
 
 const typeDefs = gql`
+    """
+    Planets and systems from the Star Wars galaxy.
+    """
     enum Planet {
         KORRIBAN
         CORUSCANT
