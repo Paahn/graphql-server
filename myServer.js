@@ -80,6 +80,7 @@ const typeDefs = gql`
         ani: Jedi!
         ahsoka: Jedi!
         sidious: Sith!
+        beings: [Being]!
     }
     
     type Mutation {
@@ -157,6 +158,12 @@ const resolvers = {
                 },
                 origin: 'Naboo'
             }
+        },
+        beings(_, {input}){
+            return [
+                {name: 'Sheev Palpatine', origin: 'NABOO', occupation: 'Senator', military: false},
+                {name: 'Greedo', origin: 'TATOOINE', occupation: 'Bounty Hunter', outerRim: true}
+            ]
         }
     },
     Mutation: {
