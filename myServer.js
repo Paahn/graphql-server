@@ -155,7 +155,9 @@ const resolvers = {
         }
     },
     Being: {
-        __resolveType(being)
+        __resolveType(being) {
+            if (being.outerRim) return 'Alien'
+        }
     }
 }
 
