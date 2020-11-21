@@ -153,6 +153,9 @@ const resolvers = {
         newSith(_, {input}) {
             return input
         }
+    },
+    Being: {
+        __resolveType(being)
     }
 }
 
