@@ -14,11 +14,13 @@ const typeDefs = gql`
     }
 
     interface Being {
+        name: String!
         origin: Planet!
         occupation: String!
     }
 
     type Human implements Being {
+        name: String!
         origin: Planet!
         occupation: String!
         languages: [String]
@@ -26,6 +28,7 @@ const typeDefs = gql`
     }
 
     type Alien implements Being {
+        name: String!
         origin: Planet!
         occupation: String!
         outerRim: Boolean!
