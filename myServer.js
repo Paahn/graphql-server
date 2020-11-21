@@ -86,6 +86,7 @@ const typeDefs = gql`
     type Mutation {
         newJedi(input: NewJediInput!): Jedi!
         newSith(input: NewSithInput!): Sith!
+        newBeing(input: NewBeingInput!): Being!
     }
 `
 
@@ -171,6 +172,9 @@ const resolvers = {
             return input
         },
         newSith(_, {input}) {
+            return input
+        },
+        newBeing(_, {input}) {
             return input
         }
     },
