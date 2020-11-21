@@ -13,9 +13,22 @@ const typeDefs = gql`
         HOTH
     }
 
-    interface Human {
+    interface Being {
         origin: Planet!
         occupation: String!
+    }
+
+    type Human implements Being {
+        origin: Planet!
+        occupation: String!
+        languages: [String]
+        military: Boolean
+    }
+
+    type Alien implements Being {
+        origin: Planet!
+        occupation: String!
+        outerRim: Boolean!
     }
 
     type Jedi {
