@@ -65,12 +65,6 @@ const typeDefs = gql`
         origin: Planet!
     }
 
-    input BeingInput {
-        name: String!
-        origin: Planet!
-        occupation: String!
-    }
-
     input NewBeingInput {
         name: String!
         origin: Planet!
