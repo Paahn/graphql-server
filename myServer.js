@@ -13,6 +13,11 @@ const typeDefs = gql`
         HOTH
     }
 
+    interface Human {
+        origin: Planet!
+        occupation: String!
+    }
+
     type Jedi {
         name: String!
         affiliation: String!
