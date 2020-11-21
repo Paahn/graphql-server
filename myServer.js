@@ -65,6 +65,16 @@ const typeDefs = gql`
         origin: Planet!
     }
 
+    input BeingInput {
+        origin: Planet!
+        occupation: String!
+    }
+
+    input NewBeingInput {
+        origin: Planet!
+        occupation: String!
+    }
+
     type Query {
         obiWan: Jedi!
         ani: Jedi!
