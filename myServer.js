@@ -13,6 +13,8 @@ const typeDefs = gql`
         HOTH
     }
 
+    union Lifeforms = Human | Alien
+
     interface Being {
         name: String!
         origin: Planet!
