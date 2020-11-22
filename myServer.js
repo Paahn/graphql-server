@@ -13,7 +13,7 @@ const typeDefs = gql`
         HOTH
     }
 
-    union Lifeforms = Human | Alien
+    union Lifeform = Human | Alien
 
     interface Being {
         name: String!
@@ -179,6 +179,12 @@ const resolvers = {
     Being: {
         __resolveType(being) {
             if (being.outerRim) return 'Alien'
+            return 'Human'
+        }
+    },
+    Lifeform: {
+        __resolveType(lifeform) {
+            if(lifeform.outerRim) return 'Alien'
             return 'Human'
         }
     }
