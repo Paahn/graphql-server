@@ -150,7 +150,7 @@ const resolvers = {
                 abilities: [
                     'Force Lightning', 'Force Spin', 'Telekinesis', 'Force Choke',
                     'Dark Aura', 'Foresight', 'Sith Magic', 'Force Persuasion',
-                    'Concealing himself in the Force', 'Force Dash'
+                    'Concealment', 'Force Dash'
                 ],
                 master: 'Darth Plagueis',
                 origin: 'NABOO'
