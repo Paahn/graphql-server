@@ -51,7 +51,7 @@ const typeDefs = gql`
         title: String!
         affiliation: String!
         abilities: [String]!
-        master: Sith
+        master: String
         origin: Planet!
     }
 
@@ -152,10 +152,8 @@ const resolvers = {
                     'Dark Aura', 'Foresight', 'Sith Magic', 'Force Persuasion',
                     'Concealing himself in the Force', 'Force Dash'
                 ],
-                master: {
-                    name: 'Darth Plagueis'
-                },
-                origin: 'Naboo'
+                master: 'Darth Plagueis',
+                origin: 'NABOO'
             }
         },
         beings(_, {input}){
